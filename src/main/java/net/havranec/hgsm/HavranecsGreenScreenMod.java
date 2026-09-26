@@ -1,11 +1,9 @@
 package net.havranec.hgsm;
 
 import net.fabricmc.api.ModInitializer;
-
 import net.havranec.hgsm.block.ModBlocks;
 import net.havranec.hgsm.item.ModItemGroups;
 import net.minecraft.util.Identifier;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
