@@ -1,6 +1,6 @@
 package net.havranec.hgsm.item;
 
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.havranec.hgsm.HavranecsGreenScreenMod;
 import net.havranec.hgsm.block.ModBlocks;
 import net.minecraft.core.Registry;
@@ -20,18 +20,17 @@ public class ModItemGroups {
 
     public static final CreativeModeTab CHROMA_BLOCKS = Registry.register(
             BuiltInRegistries.CREATIVE_MODE_TAB, CHROMA_BLOCKS_KEY,
-            FabricItemGroup.builder()
+            FabricCreativeModeTab.builder()
                     .title(Component.translatable("itemGroup." + HavranecsGreenScreenMod.MOD_ID + ".chroma_blocks"))
                     .icon(() -> new ItemStack(ModBlocks.GREEN_SCREEN))
                     .displayItems((displayContext, entries) -> {
-                        // ENTRIES
-                        entries.accept(ModBlocks.GREEN_SCREEN);
-                        entries.accept(ModBlocks.BLUE_SCREEN);
-                        entries.accept(ModBlocks.WHITE_SCREEN);
-                        entries.accept(ModBlocks.BLACK_SCREEN);
-                        entries.accept(ModBlocks.RED_SCREEN);
-                        entries.accept(ModBlocks.YELLOW_SCREEN);
-                        entries.accept(ModBlocks.MAGENTA_SCREEN);
+                        entries.accept(new ItemStack(ModBlocks.GREEN_SCREEN));
+                        entries.accept(new ItemStack(ModBlocks.BLUE_SCREEN));
+                        entries.accept(new ItemStack(ModBlocks.WHITE_SCREEN));
+                        entries.accept(new ItemStack(ModBlocks.BLACK_SCREEN));
+                        entries.accept(new ItemStack(ModBlocks.RED_SCREEN));
+                        entries.accept(new ItemStack(ModBlocks.YELLOW_SCREEN));
+                        entries.accept(new ItemStack(ModBlocks.MAGENTA_SCREEN));
                     }).build());
 
     public static void registerItemGroups() {
