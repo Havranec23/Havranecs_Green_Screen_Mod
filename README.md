@@ -3,6 +3,6 @@ This mod adds blocks that are unaffected by shadows. This is ideal for use in vi
 
 ![Blocks (0.2)](https://cdn.modrinth.com/data/cached_images/180de867ba44e110e1571574dc1ff9a352d4e75f.png)
 
-GitHub: [HavranecsGreenScreenMod](https://github.com/Havranec23/Havranecs_Green_Screen_Mod)
+GitHub: [Havranecs_Green_Screen_Mod](https://github.com/Havranec23/Havranecs_Green_Screen_Mod)
 
 MOD ID: ```hgsm```
