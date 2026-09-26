@@ -8,14 +8,14 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 
 public class ModItemGroups {
     public static final ResourceKey<CreativeModeTab> CHROMA_BLOCKS_KEY = ResourceKey.create(
             Registries.CREATIVE_MODE_TAB,
-            ResourceLocation.fromNamespaceAndPath(HavranecsGreenScreenMod.MOD_ID, "chroma_blocks")
+            Identifier.fromNamespaceAndPath(HavranecsGreenScreenMod.MOD_ID, "chroma_blocks")
     );
 
     public static final CreativeModeTab CHROMA_BLOCKS = Registry.register(

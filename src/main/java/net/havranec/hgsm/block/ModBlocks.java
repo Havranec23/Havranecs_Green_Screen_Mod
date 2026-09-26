@@ -5,7 +5,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -40,7 +40,7 @@ public class ModBlocks {
 
     // REGISTRATION METHODS
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
-        ResourceLocation id = ResourceLocation.fromNamespaceAndPath("hgsm", name);
+        Identifier id = Identifier.fromNamespaceAndPath("hgsm", name);
         ResourceKey<Block> blockKey = ResourceKey.create(Registries.BLOCK, id);
         BlockBehaviour.Properties settings = BlockBehaviour.Properties.of().setId(blockKey);
         Block block = blockFactory.apply(settings);
@@ -48,13 +48,13 @@ public class ModBlocks {
         return Registry.register(BuiltInRegistries.BLOCK, blockKey, block);
     }
 
-    private static void registerBlockItem(ResourceLocation id, Block block) {
+    private static void registerBlockItem(Identifier id, Block block) {
         ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, id);
         Item.Properties itemSettings = new Item.Properties().setId(itemKey);
         Registry.register(BuiltInRegistries.ITEM, itemKey, new BlockItem(block, itemSettings));
     }
 
     public static void registerModBlocks() {
-        HavranecsGreenScreenMod.LOGGER.info("Registration of chroma blocks for 1.21.3");
+        HavranecsGreenScreenMod.LOGGER.info("Registration of chroma blocks");
     }
 }
