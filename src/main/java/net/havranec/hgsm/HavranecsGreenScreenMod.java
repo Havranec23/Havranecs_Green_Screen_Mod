@@ -3,7 +3,7 @@ package net.havranec.hgsm;
 import net.fabricmc.api.ModInitializer;
 import net.havranec.hgsm.block.ModBlocks;
 import net.havranec.hgsm.item.ModItemGroups;
-import net.minecraft.util.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,7 +18,8 @@ public class HavranecsGreenScreenMod implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 	}
 
-	public static Identifier id(String path) {
-		return new Identifier(MOD_ID, path);
+	public static ResourceLocation id(String path) {
+		// V moderních verzích (1.21+) se používá metoda .fromNamespaceAndPath
+		return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
 	}
 }

@@ -3,29 +3,28 @@ package net.havranec.hgsm.item;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.havranec.hgsm.HavranecsGreenScreenMod;
 import net.havranec.hgsm.block.ModBlocks;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 
 public class ModItemGroups {
-    @SuppressWarnings("unused")
-    public static final ItemGroup CHROMA_BLOCKS = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(HavranecsGreenScreenMod.MOD_ID, "chroma_blocks"),
+
+    public static final CreativeModeTab CHROMA_BLOCKS = Registry.register(
+            BuiltInRegistries.CREATIVE_MODE_TAB,
+            HavranecsGreenScreenMod.id("chroma_blocks"),
             FabricItemGroup.builder()
-                    .displayName(Text.translatable("itemGroup." + HavranecsGreenScreenMod.MOD_ID + ".chroma_blocks"))
+                    .title(Component.translatable("itemGroup." + HavranecsGreenScreenMod.MOD_ID + ".chroma_blocks")) // .displayName se v Mojmap jmenuje .title
                     .icon(() -> new ItemStack(ModBlocks.GREEN_SCREEN))
-                    .entries((displayContext, entries) -> {
-                        // ENTRIES
-                        entries.add(ModBlocks.GREEN_SCREEN);
-                        entries.add(ModBlocks.BLUE_SCREEN);
-                        entries.add(ModBlocks.WHITE_SCREEN);
-                        entries.add(ModBlocks.BLACK_SCREEN);
-                        entries.add(ModBlocks.RED_SCREEN);
-                        entries.add(ModBlocks.YELLOW_SCREEN);
-                        entries.add(ModBlocks.MAGENTA_SCREEN);
+                    .displayItems((displayContext, output) -> {
+                        output.accept(ModBlocks.GREEN_SCREEN);
+                        output.accept(ModBlocks.BLUE_SCREEN);
+                        output.accept(ModBlocks.WHITE_SCREEN);
+                        output.accept(ModBlocks.BLACK_SCREEN);
+                        output.accept(ModBlocks.RED_SCREEN);
+                        output.accept(ModBlocks.YELLOW_SCREEN);
+                        output.accept(ModBlocks.MAGENTA_SCREEN);
                     }).build());
 
     public static void registerItemGroups() {
