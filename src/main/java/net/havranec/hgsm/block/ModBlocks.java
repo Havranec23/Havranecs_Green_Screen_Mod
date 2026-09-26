@@ -18,25 +18,25 @@ public class ModBlocks {
 
     // BLOCKS
     public static final Block GREEN_SCREEN = registerBlock("green_screen",
-            settings -> new Block(settings.strength(0.3f, 1.0f).sound(SoundType.WOOL).emissiveRendering((state, world, pos) -> true)));
+            settings -> new Block(settings.strength(0.3f, 1.0f).sound(SoundType.WOOL).emissiveRendering(state -> true)));
 
     public static final Block BLUE_SCREEN = registerBlock("blue_screen",
-            settings -> new Block(settings.strength(0.3f, 1.0f).sound(SoundType.WOOL).emissiveRendering((state, world, pos) -> true)));
+            settings -> new Block(settings.strength(0.3f, 1.0f).sound(SoundType.WOOL).emissiveRendering(state -> true)));
 
     public static final Block WHITE_SCREEN = registerBlock("white_screen",
-            settings -> new Block(settings.strength(0.3f, 1.0f).sound(SoundType.WOOL).emissiveRendering((state, world, pos) -> true)));
+            settings -> new Block(settings.strength(0.3f, 1.0f).sound(SoundType.WOOL).emissiveRendering(state -> true)));
 
     public static final Block BLACK_SCREEN = registerBlock("black_screen",
-            settings -> new Block(settings.strength(0.3f, 1.0f).sound(SoundType.WOOL).emissiveRendering((state, world, pos) -> true)));
+            settings -> new Block(settings.strength(0.3f, 1.0f).sound(SoundType.WOOL).emissiveRendering(state -> true)));
 
     public static final Block RED_SCREEN = registerBlock("red_screen",
-            settings -> new Block(settings.strength(0.3f, 1.0f).sound(SoundType.WOOL).emissiveRendering((state, world, pos) -> true)));
+            settings -> new Block(settings.strength(0.3f, 1.0f).sound(SoundType.WOOL).emissiveRendering(state -> true)));
 
     public static final Block YELLOW_SCREEN = registerBlock("yellow_screen",
-            settings -> new Block(settings.strength(0.3f, 1.0f).sound(SoundType.WOOL).emissiveRendering((state, world, pos) -> true)));
+            settings -> new Block(settings.strength(0.3f, 1.0f).sound(SoundType.WOOL).emissiveRendering(state -> true)));
 
     public static final Block MAGENTA_SCREEN = registerBlock("magenta_screen",
-            settings -> new Block(settings.strength(0.3f, 1.0f).sound(SoundType.WOOL).emissiveRendering((state, world, pos) -> true)));
+            settings -> new Block(settings.strength(0.3f, 1.0f).sound(SoundType.WOOL).emissiveRendering(state -> true)));
 
     // REGISTRATION METHODS
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> blockFactory) {
