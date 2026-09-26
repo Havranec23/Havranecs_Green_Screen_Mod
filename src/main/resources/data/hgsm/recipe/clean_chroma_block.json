@@ -1,15 +1,12 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "misc",
   "ingredients": [
-    {
-      "tag": "hgsm:colored_chroma_block"
-    },
-    {
-      "item": "minecraft:water_bucket"
-    }
+    "#hgsm:colored_chroma_block",
+    "minecraft:water_bucket"
   ],
   "result": {
-    "id": "hgsm:white_screen",
-    "count": 1
+    "count": 1,
+    "id": "hgsm:white_screen"
   }
 }

@@ -1,15 +1,12 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "misc",
   "ingredients": [
-    {
-      "item": "hgsm:white_screen"
-    },
-    {
-      "item": "minecraft:red_dye"
-    }
+    "hgsm:white_screen",
+    "minecraft:red_dye"
   ],
   "result": {
-    "id": "hgsm:red_screen",
-    "count": 1
+    "count": 1,
+    "id": "hgsm:red_screen"
   }
 }

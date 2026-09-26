@@ -3,5 +3,8 @@
 	"package": "net.havranec.hgsm.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [],
-	"server": []
+	"client": [],
+	"injectors": {
+		"defaultRequire": 1
+	}
 }

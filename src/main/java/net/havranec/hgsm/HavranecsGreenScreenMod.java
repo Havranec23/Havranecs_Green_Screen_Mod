@@ -19,7 +19,6 @@ public class HavranecsGreenScreenMod implements ModInitializer {
 	}
 
 	public static ResourceLocation id(String path) {
-		// V moderních verzích (1.21+) se používá metoda .fromNamespaceAndPath
 		return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
 	}
 }
