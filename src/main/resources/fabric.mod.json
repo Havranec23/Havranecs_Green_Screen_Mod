@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "hgsm",
-	"version": "0.2.3+1.21.4-1.21.10",
+	"version": "1.0+1.21.4-1.21.10",
 	"name": "Havranec's Green Screen Mod",
 	"description": "This is mod that adds green screen blocks.",
 	"authors": [
@@ -9,7 +9,7 @@
 	],
 	"contact": {
 		"homepage": "https://modrinth.com/project/havranecs-green-screen-mod",
-		"sources": "https://github.com/Havranec23/HavranecsGreenScreenMod"
+		"sources": "https://github.com/Havranec23/Havranecs_Green_Screen_Mod"
 	},
 	"license": "MIT",
 	"icon": "assets/hgsm/icon.png",
